@@ -1,5 +1,12 @@
+seo:
+  title: "Emma Thompson - UX/UI Designer"
+  description: "Welcome to my portfolio! I'm Emma Thompson, a UX/UI designer and front-end developer based in Boston. I specialize in creating user-centered digital experiences that are both beautiful and functional."
 hero:
-  title: "Hey, I'm Emma Thompson. UX/UI Designer & Front-End Developer"
+  profile:
+    light: https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80
+    dark: https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80
+    alt: "Emma Thompson"
+  title: "Hey, I'm Emma Thompson. UX/UI Designer"
   description: "I craft intuitive digital experiences where design meets functionality. Based in Boston, bringing ideas to life through code and creativity."
   links:
     - label: "Get this template"

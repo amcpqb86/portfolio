@@ -1,5 +1,12 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
+const PageSchema = z.object({
+  seo: z.object({
+    title: z.string(),
+    description: z.string()
+  })
+})
+
 const BaseSection = z.object({
   title: z.string(),
   description: z.string()
@@ -83,8 +90,10 @@ export default defineContentConfig({
     index: defineCollection({
       type: 'data',
       source: 'index.yml',
-      schema: z.object({
-        hero: PageHero,
+      schema: PageSchema.extend({
+        hero: PageHero.extend({
+          profile: DualModeImage
+        }),
         about: PageSection
       })
     }),
