@@ -11,7 +11,6 @@ if (!page.value) {
 }
 
 useSeoMeta({
-  titleTemplate: '',
   title: page.value?.seo.title,
   ogTitle: page.value?.seo.title,
   description: page.value?.seo.description,
@@ -32,22 +31,7 @@ const items = [
 </script>
 
 <template>
-  <UPage
-    v-if="page"
-    class="overflow-hidden"
-    :ui="{
-      root: 'grid sm:grid-cols-10 lg:grid-cols-10 mt-[calc(-1*var(--ui-header-height))] min-h-screen',
-      left: 'col-span-1 lg:col-span-2 border-r border-(--ui-border)',
-      center: 'col-span-8 lg:col-span-6',
-      right: 'col-span-1 lg:col-span-2 border-l border-(--ui-border) order-last'
-    }"
-  >
-    <template #left>
-      <div />
-    </template>
-    <template #right>
-      <div />
-    </template>
+  <UPage v-if="page">
     <UPageHero
       :ui="{
         container: 'py-18 sm:py-24 lg:py-32',
@@ -173,33 +157,45 @@ const items = [
         </Motion>
       </template>
 
-      <UCarousel
-        v-slot="{ item, index }"
-        :items="items"
-        auto-scroll
-        loop
-        class="-mx-4"
-        :ui="{
-          viewport: 'py-2', // 'overflow-visible',
-          container: 'w-[calc(100%+var(--ui-container))]',
-          item: 'basis-1/5'
-        }"
+      <UPageMarquee
+        pause-on-hover
+        class="py-2"
       >
-        <img
-          :src="item"
-          :alt="`Image ${index}`"
-          width="234"
-          height="234"
-          class="rounded-lg"
-          :class="index % 2 === 0 ? '-rotate-3' : 'rotate-3'"
+        <Motion
+          v-for="(item, index) in items"
+          :key="index"
+          :initial="{
+            scale: 1.1,
+            opacity: 0,
+            filter: 'blur(20px)'
+          }"
+          :animate="{
+            scale: 1,
+            opacity: 1,
+            filter: 'blur(0px)'
+          }"
+          :transition="{
+            duration: 0.6,
+            delay: index * 0.1
+          }"
         >
-      </UCarousel>
+          <img
+            :src="item"
+            :alt="`Image ${index}`"
+            width="234"
+            height="234"
+            class="rounded-lg"
+            :class="index % 2 === 0 ? '-rotate-2' : 'rotate-2'"
+          >
+        </Motion>
+      </UPageMarquee>
     </UPageHero>
     <UPageSection
       :title="page.about.title"
       :description="page.about.description"
       :ui="{
-        title: 'text-left text-xl sm:text-xl lg:text-2xl font-normal',
+        container: 'pt-0 sm:pt-0 md:pt-0 lg:pt-0',
+        title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
         description: 'text-left mt-2 text-sm sm:text-md lg:text-sm text-(--ui-text-muted)'
       }"
     />

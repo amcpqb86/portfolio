@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { navLinks } from '~/utils/links'
+
 const colorMode = useColorMode()
 
 const color = computed(() => colorMode.value === 'dark' ? '#020618' : 'white')
@@ -41,41 +43,22 @@ const [{ data: navigation }, { data: files }] = await Promise.all([
     transform: data => data.flat()
   })
 ])
-
-const links = [{
-  label: 'Home',
-  to: '/'
-}, {
-  label: 'Projects',
-  to: '/projects'
-}, {
-  label: 'Blog',
-  to: '/blog'
-}, {
-  label: 'Speaking',
-  to: '/speaking'
-}, {
-  label: 'About',
-  to: '/about'
-}]
 </script>
 
 <template>
   <UApp>
-    <AppHeader :links />
-
-    <UMain class="relative">
-      <NuxtPage />
-    </UMain>
-
-    <AppFooter :links />
+    <NuxtLayout>
+      <UMain class="relative">
+        <NuxtPage />
+      </UMain>
+    </NuxtLayout>
 
     <ClientOnly>
       <LazyUContentSearch
         :files="files"
         :navigation="navigation"
         shortcut="meta_k"
-        :links="links"
+        :links="navLinks"
         :fuse="{ resultLimit: 42 }"
       />
     </ClientOnly>

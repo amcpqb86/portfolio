@@ -9,7 +9,6 @@ const { footer } = useAppConfig()
 </script>
 
 <template>
-  <USeparator />
   <UFooter
     class="z-10 bg-(--ui-bg)"
     :ui="{ left: 'text-xs' }"
