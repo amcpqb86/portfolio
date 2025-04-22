@@ -1,0 +1,12 @@
+hero:
+  title: "Hey, I'm Emma Thompson. UX/UI Designer & Front-End Developer"
+  description: "I craft intuitive digital experiences where design meets functionality. Based in Boston, bringing ideas to life through code and creativity."
+  links:
+    - label: "Get this template"
+      to: "https://ui.nuxt.com/pro/templates"
+    - label: "Available for new project"
+about:
+  title: "About Me"
+  description: |
+    I'm Emma Thompson, a passionate UX/UI designer and front-end developer with 6 years of experience in the digital space. After graduating from Boston University with a degree in Interactive Design, I've dedicated my career to creating user-centered experiences that are both beautiful and functional.
+    I thrive in the space where creativity meets technology, using my dual expertise in design and development to build seamless digital products from concept to implementation. My approach combines strategic thinking with technical know-how, ensuring that every pixel serves a purpose.

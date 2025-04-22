@@ -1,40 +1,92 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
-/* const variantEnum = z.enum(['solid', 'outline', 'subtle', 'soft', 'ghost', 'link'])
-const colorEnum = z.enum(['primary', 'secondary', 'neutral', 'error', 'warning', 'success', 'info'])
-const sizeEnum = z.enum(['xs', 'sm', 'md', 'lg', 'xl'])
-const orientationEnum = z.enum(['vertical', 'horizontal'])
-
-const baseSchema = {
-  title: z.string().nonempty(),
-  description: z.string().nonempty()
-}
-
-const linkSchema = z.object({
-  label: z.string().nonempty(),
-  to: z.string().nonempty(),
-  icon: z.string().optional(),
-  size: sizeEnum.optional(),
-  trailing: z.boolean().optional(),
-  target: z.string().optional(),
-  color: colorEnum.optional(),
-  variant: variantEnum.optional()
+const BaseSection = z.object({
+  title: z.string(),
+  description: z.string()
 })
 
-const imageSchema = z.object({
-  src: z.string().nonempty(),
-  alt: z.string().optional(),
-  loading: z.string().optional(),
-  srcset: z.string().optional()
+const Link = z.object({
+  label: z.string(),
+  to: z.string(),
+  icon: z.string().optional()
+})
+
+const Button = z.object({
+  label: z.string(),
+  icon: z.string().optional(),
+  trailingIcon: z.string().optional(),
+  to: z.string().optional(),
+  color: z.enum(['primary', 'neutral', 'success', 'warning', 'error', 'info']).optional(),
+  size: z.enum(['xs', 'sm', 'md', 'lg', 'xl']).optional(),
+  variant: z.enum(['solid', 'outline', 'subtle', 'soft', 'ghost', 'link']).optional(),
+  id: z.string().optional(),
+  target: z.enum(['_blank', '_self']).optional()
+})
+
+const Image = z.object({
+  src: z.string(),
+  alt: z.string(),
+  width: z.number().optional(),
+  height: z.number().optional()
+})
+
+const DualModeImage = z.object({
+  light: z.string().editor({ input: 'media' }),
+  dark: z.string().editor({ input: 'media' }),
+  width: z.number().optional(),
+  height: z.number().optional(),
+  alt: z.string().optional()
+})
+
+const Author = z.object({
+  name: z.string(),
+  description: z.string().optional(),
+  username: z.string().optional(),
+  twitter: z.string().optional(),
+  to: z.string().optional(),
+  avatar: Image.optional()
+})
+
+/* const Testimonial = z.object({
+  quote: z.string(),
+  author: Author
 }) */
+
+const PageSection = BaseSection.extend({
+  links: z.array(Button),
+  image: DualModeImage,
+  cta: z.object({
+    title: z.string(),
+    label: z.string(),
+    to: z.string(),
+    icon: z.string()
+  }).optional()
+})
+
+const PageHero = BaseSection.extend({
+  image: DualModeImage.optional(),
+  head: z.object({
+    title: z.string().optional(),
+    description: z.string().optional()
+  }).optional(),
+  headline: z.object({
+    label: z.string(),
+    to: z.string(),
+    icon: z.string().optional().editor({ input: 'icon' })
+  }).optional(),
+  links: z.array(Button).optional(),
+  cta: Link.optional()
+})
 
 export default defineContentConfig({
   collections: {
-    landing: defineCollection({
-      type: 'page',
-      source: [
-        { include: 'yml' }
-      ]
+    index: defineCollection({
+      type: 'data',
+      source: 'index.yml',
+      schema: z.object({
+        hero: PageHero,
+        about: PageSection
+      })
     }),
     blog: defineCollection({
       type: 'page',
@@ -42,7 +94,8 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
-        date: z.string().nonempty()
+        date: z.string().nonempty(),
+        author: Author
       })
     })
   }

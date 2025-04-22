@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '@nuxt/ui-pro',
     '@nuxt/content',
     '@vueuse/nuxt',
-    'nuxt-og-image'
+    'nuxt-og-image',
+    'motion-v/nuxt'
   ],
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
