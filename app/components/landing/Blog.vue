@@ -34,12 +34,21 @@ if (!posts.value) {
         variant="naked"
         v-bind="post"
         :to="post.path"
-        :class="index % 2 === 0 ? 'bg-(--ui-bg-muted) hover:bg-(--ui-bg-accented)/50' : 'bg-(--ui-bg) hover:bg-(--ui-bg-accented)/50'"
         :ui="{
-          root: 'lg:px-4 relative lg:flex ring-0 hover:ring-0',
+          root: 'relative lg:items-start lg:flex ring-0 hover:ring-0',
           header: 'hidden'
         }"
-      />
+      >
+        <template #footer>
+          <UButton
+            size="xs"
+            variant="link"
+            class="px-0"
+            label="Read Article"
+            trailing-icon="i-lucide-arrow-right"
+          />
+        </template>
+      </UBlogPost>
     </UBlogPosts>
   </UPageSection>
 </template>
