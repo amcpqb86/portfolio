@@ -54,10 +54,10 @@ const Author = z.object({
   avatar: Image.optional()
 })
 
-/* const Testimonial = z.object({
+const Testimonial = z.object({
   quote: z.string(),
   author: Author
-}) */
+})
 
 const PageSection = BaseSection.extend({
   links: z.array(Button),
@@ -108,7 +108,8 @@ export default defineContentConfig({
             })
           }))
         }),
-        blog: PageSection
+        blog: PageSection,
+        testimonials: z.array(Testimonial)
       })
     }),
     blog: defineCollection({
