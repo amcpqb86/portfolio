@@ -134,7 +134,7 @@ defineProps<{
 
     <UPageMarquee
       pause-on-hover
-      class="py-2"
+      class="py-2 -mx-4 sm:-mx-6 lg:-mx-8"
     >
       <Motion
         v-for="(img, index) in page.hero.images"

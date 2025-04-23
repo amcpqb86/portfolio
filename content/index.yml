@@ -36,6 +36,30 @@ about:
   description: |
     As a UX/UI designer and front-end developer with 6 years of experience, I leverage my Boston University Interactive Design degree to craft user-centered digital experiences.
     My approach blends creative strategy with technical expertise, transforming concepts into functional, purposeful digital products that seamlessly integrate design and technology.
+experience:
+  title: Work Experience
+  items:
+    - position: "Brand Designer at"
+      date: "2023 - Present"
+      company:
+        name: Nuxt
+        logo: "i-simple-icons-nuxtdotjs"
+        url: "https://nuxt.com"
+        color: "#00DC82"
+    - position: "Assets Designer at"
+      date: "2022 - 2023"
+      company:
+        name: Raycast
+        logo: "i-simple-icons-raycast"
+        url: "https://raycast.com"
+        color: "#FF6363"
+    - position: "Senior UX/UI Designer at"
+      date: "2020 - 2021"
+      company:
+        name: Linear
+        logo: "i-simple-icons-linear"
+        url: "https://linear.app"
+        color: "#5E6AD2"
 blog:
   title: "Latest Articles"
   description: "Some of my recent thoughts"

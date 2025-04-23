@@ -7,15 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <UHeader
-    :ui="{
-      root: 'border-0 backdrop-blur-none bg-transparent'
-    }"
-  >
-    <template #left>
-      <div />
-    </template>
-
+  <div class="fixed top-2 sm:top-4 mx-auto left-1/2 transform -translate-x-1/2 z-10">
     <UNavigationMenu
       :items="links"
       variant="link"
@@ -25,13 +17,5 @@ defineProps<{
         link: 'px-2 py-1'
       }"
     />
-
-    <template #body>
-      <UNavigationMenu
-        :items="links"
-        orientation="vertical"
-        class="-mx-2.5"
-      />
-    </template>
-  </UHeader>
+  </div>
 </template>

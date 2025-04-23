@@ -96,6 +96,18 @@ export default defineContentConfig({
           images: z.array(Image)
         }),
         about: PageSection,
+        experience: PageSection.extend({
+          items: z.array(z.object({
+            date: z.string(),
+            position: z.string(),
+            company: z.object({
+              name: z.string(),
+              url: z.string(),
+              logo: z.string(),
+              color: z.string()
+            })
+          }))
+        }),
         blog: PageSection
       })
     }),
