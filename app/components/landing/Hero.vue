@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { IndexCollectionItem } from '@nuxt/content'
 
+const { footer } = useAppConfig()
+
 defineProps<{
   page: IndexCollectionItem
 }>()
@@ -14,7 +16,7 @@ defineProps<{
       headline: 'flex items-center justify-center',
       title: 'mx-auto max-w-xl text-pretty',
       description: 'mt-2 text-md mx-auto max-w-2xl text-pretty sm:text-md text-(--ui-text-muted)',
-      links: 'mt-4'
+      links: 'mt-4 flex-col justify-center items-center'
     }"
   >
     <template #headline>
@@ -130,6 +132,32 @@ defineProps<{
           </UButton>
         </div>
       </Motion>
+
+      <div class="gap-x-4 inline-flex mt-4">
+        <Motion
+          v-for="(link, index) of footer?.links"
+          :key="index"
+
+          :initial="{
+            scale: 1.1,
+            opacity: 0,
+            filter: 'blur(20px)'
+          }"
+          :animate="{
+            scale: 1,
+            opacity: 1,
+            filter: 'blur(0px)'
+          }"
+          :transition="{
+            duration: 0.6,
+            delay: 0.5 + index * 0.1
+          }"
+        >
+          <UButton
+            v-bind="{ size: 'lg', color: 'neutral', variant: 'ghost', ...link }"
+          />
+        </Motion>
+      </div>
     </template>
 
     <UPageMarquee
@@ -165,7 +193,3 @@ defineProps<{
     </UPageMarquee>
   </UPageHero>
 </template>
-
-<style scoped>
-
-</style>

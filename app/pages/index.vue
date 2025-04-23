@@ -21,8 +21,14 @@ useSeoMeta({
 <template>
   <UPage v-if="page">
     <LandingHero :page />
-    <LandingAbout :page />
-    <LandingWorkExperience :page />
+    <UPageSection
+      :ui="{
+        container: '!pt-0 lg:flex md:flex-row items-start'
+      }"
+    >
+      <LandingAbout :page />
+      <LandingWorkExperience :page />
+    </UPageSection>
     <LandingBlog :page />
     <LandingTestimonials :page />
     <LandingFAQ :page />

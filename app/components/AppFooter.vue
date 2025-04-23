@@ -1,11 +1,5 @@
 <script setup lang="ts">
-// import type { NavigationMenuItem } from '@nuxt/ui'
-
 const { footer } = useAppConfig()
-
-/* defineProps<{
-  links: NavigationMenuItem[]
-}>() */
 </script>
 
 <template>
@@ -16,11 +10,6 @@ const { footer } = useAppConfig()
     <template #left>
       {{ footer.credits }}
     </template>
-
-    <!--    <UNavigationMenu
-      :items="links"
-      variant="link"
-    /> -->
 
     <template #right>
       <UColorModeButton size="xs" />

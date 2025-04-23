@@ -10,7 +10,7 @@ defineProps<{
   <UPageSection
     :title="page.experience.title"
     :ui="{
-      container: 'px-0 pt-0 sm:pt-0 md:pt-0 lg:pt-0 gap-4 sm:gap-4',
+      container: '!p-0 gap-4 sm:gap-4',
       title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium'
     }"
   >
