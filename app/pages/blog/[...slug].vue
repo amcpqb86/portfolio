@@ -62,21 +62,23 @@ const formatDate = (dateString: string) => {
           Blog
         </ULink>
         <div class="flex flex-col gap-3 mt-8">
-          <NuxtImg
-            :src="page.image"
-            :alt="page.title"
-            class="rounded-lg w-full h-[250px] object-cover object-center"
-          />
           <div class="flex text-xs text-(--ui-text-muted) items-center justify-center gap-2">
-            <span>
+            <span v-if="page.date">
               {{ formatDate(page.date) }}
             </span>
-            -
-            <span>
+            <span v-if="page.date && page.minRead">
+              -
+            </span>
+            <span v-if="page.minRead">
               {{ page.minRead }} MIN READ
             </span>
           </div>
-          <h1 class="text-4xl main-gradient text-center max-w-3xl mx-auto">
+          <NuxtImg
+            :src="page.image"
+            :alt="page.title"
+            class="rounded-lg w-full h-[300px] object-cover object-center"
+          />
+          <h1 class="text-4xl text-center font-medium max-w-3xl mx-auto mt-4">
             {{ page.title }}
           </h1>
           <p class="text-(--ui-text-muted) text-center max-w-2xl mx-auto">
@@ -84,13 +86,11 @@ const formatDate = (dateString: string) => {
           </p>
           <div class="flex items-center justify-center gap-2 mt-2">
             <UUser
-              v-for="(author, index) in page.authors"
-              :key="index"
               orientation="vertical"
               color="neutral"
               variant="outline"
               class="justify-center items-center text-center"
-              v-bind="author"
+              v-bind="page.author"
             />
           </div>
         </div>
@@ -100,17 +100,15 @@ const formatDate = (dateString: string) => {
             :value="page"
           />
 
-          <USeparator class="my-10">
-            <div class="flex items-center gap-2 text-sm text-(--ui-text-muted)">
-              <UButton
-                size="sm"
-                variant="link"
-                color="neutral"
-                label="Copy link"
-                @click="copyToClipboard(articleLink, 'Article link copied to clipboard')"
-              />
-            </div>
-          </USeparator>
+          <div class="flex items-center justify-end gap-2 text-sm text-(--ui-text-muted)">
+            <UButton
+              size="sm"
+              variant="link"
+              color="neutral"
+              label="Copy link"
+              @click="copyToClipboard(articleLink, 'Article link copied to clipboard')"
+            />
+          </div>
           <UContentSurround :surround />
         </UPageBody>
       </UPage>

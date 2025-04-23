@@ -105,6 +105,7 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
+        minRead: z.number(),
         date: z.string().nonempty(),
         image: z.string().nonempty(),
         author: Author

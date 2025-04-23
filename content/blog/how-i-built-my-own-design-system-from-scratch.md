@@ -1,13 +1,14 @@
 ---
 title: "How I Built My Design System from Scratch"
 description: "A practical guide to creating your own design system, from initial audit to implementation, and the lessons learned along the way."
-date: 05/12/2024
+date: 2025-12-05
+image: https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
 minRead: 6
-authors:
-  - name: Emma Thompson
-    avatar:
-      src: https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80
-      alt: Emma Thompson
+author:
+  name: Emma Thompson
+  avatar:
+    src: https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80
+    alt: Emma Thompson
 ---
 
 After years of starting each project with a blank Figma file, I finally took the plunge and created my own comprehensive design system. The process was both challenging and incredibly rewarding, and I wanted to share my approach for other designers considering the same journey.
