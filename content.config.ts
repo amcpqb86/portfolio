@@ -92,9 +92,11 @@ export default defineContentConfig({
       source: 'index.yml',
       schema: PageSchema.extend({
         hero: PageHero.extend({
-          profile: DualModeImage
+          profile: DualModeImage,
+          images: z.array(Image)
         }),
-        about: PageSection
+        about: PageSection,
+        blog: PageSection
       })
     }),
     blog: defineCollection({
@@ -104,6 +106,7 @@ export default defineContentConfig({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
         date: z.string().nonempty(),
+        image: z.string().nonempty(),
         author: Author
       })
     })
