@@ -65,7 +65,6 @@ testimonials:
     author:
       name: 'Sarah Chen'
       description: 'Product Director at Bloom Finance'
-      to: 'https://linkedin.com/in/sarahchen'
       avatar:
         src: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
         srcset: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
@@ -73,7 +72,6 @@ testimonials:
     author:
       name: 'Michael Rodriguez'
       description: 'Co-founder of Wavelength Music'
-      to: 'https://x.com/mrodriguez'
       avatar:
         src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
         srcset: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
@@ -81,10 +79,46 @@ testimonials:
     author:
       name: 'Dr. Aisha Johnson'
       description: 'Chief Innovation Officer at GreenTech Solutions'
-      to: 'https://linkedin.com/in/aishajohnson'
       avatar:
         src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
         srcset: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
 blog:
   title: "Latest Articles"
   description: "Some of my recent thoughts"
+faq:
+  title: Frequently Asked Questions
+  description: Answers to common questions about my process and services.
+  categories:
+    - title: Services & Process
+      questions:
+        - label: What services do you offer?
+          content: |
+            I specialize in UX/UI design and front-end development. This includes user research, wireframing, interactive prototyping, creating intuitive user interfaces, building responsive websites and web applications (especially with Vue.js/Nuxt.js), and developing design systems. My goal is to create seamless digital experiences from concept to deployment.
+        - label: What is your design process like?
+          content: |
+            My process is collaborative and iterative, typically involving stages like Discovery & Research, Ideation & Prototyping, User Testing, Visual Design, and close collaboration with development teams during implementation. I tailor the process based on project needs, always focusing on user-centered solutions.
+        - label: Do you work with startups?
+          content: |
+            Absolutely! I enjoy working with startups to help shape their product vision and create user-friendly interfaces from the ground up. I can adapt my process to fit the fast-paced startup environment.
+    - title: Pricing & Timelines
+      questions:
+        - label: How much does a project typically cost?
+          content: |
+            Project costs vary based on scope, complexity, features, and timeline. For comprehensive UX/UI design and front-end development projects, my engagements typically start around $5,000, with average projects ranging between $8,000 and $25,000. For consulting or specific design tasks, my day rate is $700.
+        - label: What are your payment terms?
+          content: |
+            I generally require a 40% deposit to schedule the project and begin work, with the remaining 60% due upon successful project completion and delivery. I accept payments via bank transfer and Stripe.
+        - label: How long does a typical project take?
+          content: |
+            Timelines depend heavily on the project's scope and complexity. Smaller projects might take 3-4 weeks, while larger, more involved projects can range from 2 to 4 months. I always provide a detailed timeline estimate after the initial discovery phase.
+        - label: Do you offer retainers or ongoing support?
+          content: |
+            Yes, for clients needing ongoing design support, feature development, or maintenance, I offer monthly retainer options tailored to specific needs. Let's discuss if this is something you're interested in.
+    - title: About Me
+      questions:
+        - label: What do you enjoy most about your work?
+          content: |
+            I love the challenge of solving complex problems through design and technology. It's incredibly rewarding to see people interact with something I've created and find it genuinely useful and easy to navigate. Bridging the gap between user needs and technical possibilities is what truly excites me.
+        - label: What are your hobbies outside of work?
+          content: |
+            When I'm not designing or coding, I enjoy exploring Boston's neighborhoods, trying out new coffee shops, and hiking in the nearby reservations. I'm also passionate about photography and occasionally contribute to open-source projects.

@@ -108,8 +108,21 @@ export default defineContentConfig({
             })
           }))
         }),
+        testimonials: z.array(Testimonial),
         blog: PageSection,
-        testimonials: z.array(Testimonial)
+        faq: PageSection.extend({
+          categories: z.array(
+            z.object({
+              title: z.string().nonempty(),
+              questions: z.array(
+                z.object({
+                  label: z.string().nonempty(),
+                  content: z.string().nonempty()
+                })
+
+              )
+            }))
+        })
       })
     }),
     blog: defineCollection({

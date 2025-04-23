@@ -23,7 +23,8 @@ useSeoMeta({
     <LandingHero :page />
     <LandingAbout :page />
     <LandingWorkExperience :page />
-    <LandingTestimonials :page />
     <LandingBlog :page />
+    <LandingTestimonials :page />
+    <LandingFAQ :page />
   </UPage>
 </template>
