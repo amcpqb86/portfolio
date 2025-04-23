@@ -21,7 +21,7 @@ defineProps<{
     >
       <UPageCTA
         :description="item.quote"
-        variant="subtle"
+        variant="naked"
         class="rounded-none"
         :ui="{
           container: 'sm:py-12 lg:py-12 sm:gap-8',
