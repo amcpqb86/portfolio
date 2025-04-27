@@ -15,7 +15,7 @@ defineProps<{
       wrapper: '',
       headline: 'flex items-center justify-center',
       title: 'mx-auto max-w-xl text-pretty',
-      description: 'mt-2 text-md mx-auto max-w-2xl text-pretty sm:text-md text-(--ui-text-muted)',
+      description: 'mt-2 text-md mx-auto max-w-2xl text-pretty sm:text-md text-muted',
       links: 'mt-4 flex-col justify-center items-center'
     }"
   >
@@ -37,7 +37,7 @@ defineProps<{
         }"
       >
         <UColorModeAvatar
-          class="size-18 ring ring-(--ui-border) ring-offset-3 ring-offset-(--ui-bg)"
+          class="size-18 ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
           v-bind="page.hero.profile"
         />
       </Motion>
@@ -122,10 +122,10 @@ defineProps<{
             <template #leading>
               <span class="relative flex size-2">
                 <span
-                  class="absolute bg-(--ui-success) inline-flex size-full animate-ping rounded-full opacity-75"
+                  class="absolute bg-success inline-flex size-full animate-ping rounded-full opacity-75"
                 />
                 <span
-                  class="relative bg-(--ui-success) inline-flex size-2 scale-90 rounded-full"
+                  class="relative bg-success inline-flex size-2 scale-90 rounded-full"
                 />
               </span>
             </template>

@@ -22,7 +22,7 @@ defineProps<{
         :while-in-view="{ opacity: 1, transform: 'translateY(0)' }"
         :transition="{ delay: 0.4 + 0.2 * index }"
         :in-view-options="{ once: true }"
-        class="text-(--ui-text-muted) flex items-center text-nowrap gap-4"
+        class="text-muted flex items-center text-nowrap gap-4"
       >
         <p class="text-sm">
           {{ experience.date }}

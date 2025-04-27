@@ -12,7 +12,7 @@ defineProps<{
       :items="links"
       variant="link"
       color="neutral"
-      class="bg-(--ui-bg-muted)/80 backdrop-blur-sm rounded-full px-4 border border-(--ui-border-muted)/50"
+      class="bg-muted/80 backdrop-blur-sm rounded-full px-4 border border-muted/50"
       :ui="{
         link: 'px-2 py-1'
       }"
