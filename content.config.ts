@@ -119,10 +119,21 @@ export default defineContentConfig({
                   label: z.string().nonempty(),
                   content: z.string().nonempty()
                 })
-
               )
             }))
         })
+      })
+    }),
+    projects: defineCollection({
+      type: 'data',
+      source: 'projects/*.yml',
+      schema: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        image: z.string().nonempty(),
+        url: z.string().nonempty(),
+        tags: z.array(z.string()),
+        date: z.string().nonempty()
       })
     }),
     blog: defineCollection({
