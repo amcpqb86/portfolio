@@ -147,6 +147,14 @@ export default defineContentConfig({
         image: z.string().nonempty(),
         author: Author
       })
+    }),
+    pages: defineCollection({
+      type: 'page',
+      source: [
+        { include: 'projects.yml' },
+        { include: 'blog.yml' }
+      ],
+      schema: PageHero
     })
   }
 })

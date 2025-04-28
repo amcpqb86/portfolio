@@ -11,11 +11,7 @@ defineProps<{
 <template>
   <UPageHero
     :ui="{
-      container: 'py-18 sm:py-24 lg:py-32',
-      wrapper: '',
       headline: 'flex items-center justify-center',
-      title: 'mx-auto max-w-xl text-pretty',
-      description: 'mt-2 text-md mx-auto max-w-2xl text-pretty sm:text-md text-muted',
       links: 'mt-4 flex-col justify-center items-center'
     }"
   >
@@ -60,9 +56,7 @@ defineProps<{
           delay: 0.1
         }"
       >
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl">
-          {{ page.hero.title }}
-        </h1>
+        {{ page.hero.title }}
       </Motion>
     </template>
 

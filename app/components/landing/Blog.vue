@@ -36,6 +36,7 @@ if (!posts.value) {
         :to="post.path"
         :ui="{
           root: 'relative lg:items-start lg:flex ring-0 hover:ring-0',
+          body: '!px-0',
           header: 'hidden'
         }"
       >
