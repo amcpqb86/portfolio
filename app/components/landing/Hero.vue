@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { IndexCollectionItem } from '@nuxt/content'
 
-const { footer } = useAppConfig()
+const { footer, global } = useAppConfig()
 
 defineProps<{
   page: IndexCollectionItem
@@ -114,18 +114,21 @@ defineProps<{
             color="neutral"
           />
           <UButton
-            color="success"
+            :color="global.available ? 'success' : 'error'"
             variant="ghost"
             class="gap-2"
-            v-bind="page.hero.links[1]"
+            :to="global.available ? global.meetingLink : ''"
+            :label="global.available ? 'Available for new projects' : 'Not available at the moment'"
           >
             <template #leading>
               <span class="relative flex size-2">
                 <span
-                  class="absolute bg-success inline-flex size-full animate-ping rounded-full opacity-75"
+                  class="absolute inline-flex size-full rounded-full opacity-75"
+                  :class="global.available ? 'bg-success animate-ping' : 'bg-error'"
                 />
                 <span
-                  class="relative bg-success inline-flex size-2 scale-90 rounded-full"
+                  class="relative inline-flex size-2 scale-90 rounded-full"
+                  :class="global.available ? 'bg-success' : 'bg-error'"
                 />
               </span>
             </template>

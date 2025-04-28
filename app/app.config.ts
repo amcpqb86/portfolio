@@ -1,4 +1,8 @@
 export default defineAppConfig({
+  global: {
+    meetingLink: 'https://cal.com/',
+    available: true
+  },
   ui: {
     colors: {
       primary: 'blue',

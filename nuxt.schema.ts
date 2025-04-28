@@ -2,6 +2,27 @@ import { field, group } from '@nuxt/content/preview'
 
 export default defineNuxtSchema({
   appConfig: {
+    global: group({
+      title: 'Website',
+      description: 'Global website configuration',
+      icon: 'lucide:settings',
+      fields: {
+        meetingLink: field({
+          type: 'string',
+          title: 'Meeting link',
+          description: 'Your meeting link.',
+          icon: 'lucide:calendar',
+          default: 'https://cal.com/'
+        }),
+        available: field({
+          type: 'boolean',
+          title: 'Available',
+          description: 'Your availability.',
+          icon: 'lucide:check',
+          default: true
+        })
+      }
+    }),
     ui: group({
       title: 'UI',
       description: 'UI Customization.',

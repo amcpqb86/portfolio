@@ -11,7 +11,6 @@ hero:
   links:
     - label: "Get this template"
       to: "https://ui.nuxt.com/pro/templates"
-    - label: "Available for new project"
   images:
     - src: https://picsum.photos/468/468?random=1
       alt: Random Image 1
