@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    <UContainer class="border-x border-default">
+    <UContainer class="border-x border-default mt-10">
       <AppHeader :links="navLinks" />
       <slot />
       <AppFooter :links="navLinks" />
