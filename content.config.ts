@@ -92,7 +92,6 @@ export default defineContentConfig({
       source: 'index.yml',
       schema: PageSchema.extend({
         hero: PageHero.extend({
-          profile: DualModeImage,
           images: z.array(Image)
         }),
         about: PageSection,

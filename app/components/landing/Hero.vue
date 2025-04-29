@@ -34,7 +34,9 @@ defineProps<{
       >
         <UColorModeAvatar
           class="size-18 ring ring-default ring-offset-3 ring-offset-(--ui-bg)"
-          v-bind="page.hero.profile"
+          :light="global.picture?.light!"
+          :dark="global.picture?.dark!"
+          :alt="global.picture?.alt!"
         />
       </Motion>
     </template>
