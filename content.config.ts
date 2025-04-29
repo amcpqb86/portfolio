@@ -152,7 +152,9 @@ export default defineContentConfig({
       type: 'page',
       source: [
         { include: 'projects.yml' },
-        { include: 'blog.yml' }
+        { include: 'blog.yml' },
+        { include: 'speaking.yml' },
+        { include: 'about.yml' }
       ],
       schema: PageHero
     })

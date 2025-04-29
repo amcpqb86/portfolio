@@ -1,13 +1,38 @@
 <script setup lang="ts">
-
+const { data: page } = await useAsyncData('about-page', () => {
+  return queryCollection('pages').path('/about').first()
+})
+if (!page.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Page not found',
+    fatal: true
+  })
+}
 </script>
 
 <template>
-  <div>
-    about
-  </div>
+  <UPage v-if="page">
+    <UPageHero
+      :title="page.title"
+      :description="page.description"
+      :links="page.links"
+      :ui="{
+        title: '!mx-0 text-left',
+        description: '!mx-0 text-left',
+        links: 'justify-start'
+      }"
+    />
+    <UPageSection
+      :ui="{
+        container: '!pt-0'
+      }"
+    >
+      <ProseSteps>
+        <h3>Test</h3>
+        <h3>Test</h3>
+        <h3>Test</h3>
+      </ProseSteps>
+    </UPageSection>
+  </UPage>
 </template>
-
-<style scoped>
-
-</style>
