@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 </script>
 
 <template>
@@ -7,11 +6,7 @@
     <UContainer class="border-x border-default pt-10">
       <AppHeader :links="navLinks" />
       <slot />
-      <AppFooter :links="navLinks" />
+      <AppFooter />
     </UContainer>
   </div>
 </template>
-
-<style scoped>
-
-</style>
