@@ -152,11 +152,32 @@ export default defineContentConfig({
       type: 'page',
       source: [
         { include: 'projects.yml' },
-        { include: 'blog.yml' },
-        { include: 'speaking.yml' },
-        { include: 'about.yml' }
+        { include: 'blog.yml' }
       ],
       schema: PageHero
+    }),
+    speaking: defineCollection({
+      type: 'data',
+      source: 'speaking.yml',
+      schema: PageSchema.extend({
+        hero: PageHero,
+        events: z.array(z.object({
+          title: z.string(),
+          date: z.string(),
+          location: z.string(),
+          url: z.string().optional(),
+          image: Image.optional()
+        }))
+      })
+    }),
+    about: defineCollection({
+      type: 'data',
+      source: 'about.yml',
+      schema: PageSchema.extend({
+        hero: PageHero,
+        content: z.object({}),
+        images: z.array(Image)
+      })
     })
   }
 })
