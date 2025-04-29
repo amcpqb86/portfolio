@@ -130,6 +130,7 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
+        image: z.string().nonempty(),
         url: z.string().nonempty(),
         tags: z.array(z.string()),
         date: z.string().nonempty()
@@ -165,8 +166,7 @@ export default defineContentConfig({
           title: z.string(),
           date: z.string(),
           location: z.string(),
-          url: z.string().optional(),
-          image: Image.optional()
+          url: z.string().optional()
         }))
       })
     }),

@@ -79,8 +79,13 @@ function formatDate(dateString: string): string {
           <div
             v-for="(event, index) in eventsInCategory"
             :key="`${category}-${index}`"
-            class="relative pl-6 border-l border-default"
+            class="group relative pl-6 border-l border-default"
           >
+            <NuxtLink
+              v-if="event.url"
+              :to="event.url"
+              class="absolute inset-0"
+            />
             <div class="mb-1 text-sm font-medium text-muted">
               <span>{{ event.location }}</span>
               <span
@@ -96,15 +101,13 @@ function formatDate(dateString: string): string {
 
             <ULink
               v-if="event.url"
-              :to="event.url"
               target="_blank"
-              class="inline-flex items-center mt-2 text-sm font-medium text-primary-400 hover:text-primary-500"
-              inactive-class="text-primary-400 hover:text-primary-500"
+              class="inline-flex items-center mt-2 text-sm font-medium text-primary"
             >
               {{ event.category === 'Podcast' ? 'Listen' : 'Watch' }}
               <UIcon
-                name="i-heroicons-arrow-right-20-solid"
-                class="size-4 ml-1"
+                name="i-lucide-arrow-right"
+                class="size-4 transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
               />
             </ULink>
           </div>

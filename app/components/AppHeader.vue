@@ -16,6 +16,10 @@ defineProps<{
       :ui="{
         link: 'px-2 py-1'
       }"
-    />
+    >
+      <template #list-trailing>
+        <ColorModeButton />
+      </template>
+    </UNavigationMenu>
   </div>
 </template>
