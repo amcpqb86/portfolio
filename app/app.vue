@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { navLinks } from '~/utils/links'
-
 const colorMode = useColorMode()
 
 const color = computed(() => colorMode.value === 'dark' ? '#020618' : 'white')

@@ -14,7 +14,8 @@ defineProps<{
       color="neutral"
       class="bg-muted/80 backdrop-blur-sm rounded-full px-4 border border-muted/50"
       :ui="{
-        link: 'px-2 py-1'
+        link: 'px-2 py-1',
+        linkLeadingIcon: 'hidden'
       }"
     >
       <template #list-trailing>
