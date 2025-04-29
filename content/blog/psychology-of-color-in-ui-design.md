@@ -1,13 +1,13 @@
 ---
 title: "The Psychology of Color in UI Design"
 description: "Exploring how strategic color choices can influence user behavior, evoke emotions, and enhance the overall user experience of digital products."
-date: 15/03/2025
+date: 2025-03-15
 image: https://images.pexels.com/photos/40799/paper-colorful-color-loose-40799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
 minRead: 5
 author:
   name: Emma Thompson
   avatar:
-    src: https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80
+    src: https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
     alt: Emma Thompson
 ---
 
