@@ -1,4 +1,12 @@
 <script setup lang="ts">
+type Event = {
+  title: string
+  date: string
+  location: string
+  url?: string
+  category: 'Conference' | 'Live talk' | 'Podcast'
+}
+
 const { data: page } = await useAsyncData('speaking', () => {
   return queryCollection('speaking').first()
 })
@@ -16,6 +24,25 @@ useSeoMeta({
   description: page.value.hero.description,
   ogDescription: page.value.hero.description
 })
+
+const groupedEvents = computed(() => {
+  if (!page.value?.events) return {} as Record<Event['category'], Event[]>
+  return page.value.events.reduce((acc, event: Event) => {
+    const category = event.category
+    if (!acc[category]) {
+      acc[category] = []
+    }
+    acc[category].push(event)
+    return acc
+  }, {} as Record<Event['category'], Event[]>)
+})
+
+function formatDate(dateString: string): string {
+  if (!dateString || isNaN(new Date(dateString).getTime())) {
+    return dateString
+  }
+  return new Date(dateString).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })
+}
 </script>
 
 <template>
@@ -34,6 +61,55 @@ useSeoMeta({
       :ui="{
         container: '!pt-0'
       }"
-    />
+    >
+      <div
+        v-for="(eventsInCategory, category) in groupedEvents"
+        :key="category"
+        class="grid grid-cols-1 lg:grid-cols-3 lg:gap-8 mb-16 last:mb-0"
+      >
+        <div class="lg:col-span-1 mb-4 lg:mb-0">
+          <h2
+            class="lg:sticky lg:top-16 text-xl font-semibold tracking-tight text-highlighted"
+          >
+            {{ category.replace(/([A-Z])/g, ' $1').replace(/^./, (str) => str.toUpperCase()) }}s
+          </h2>
+        </div>
+
+        <div class="lg:col-span-2 space-y-8">
+          <div
+            v-for="(event, index) in eventsInCategory"
+            :key="`${category}-${index}`"
+            class="relative pl-6 border-l border-default"
+          >
+            <div class="mb-1 text-sm font-medium text-muted">
+              <span>{{ event.location }}</span>
+              <span
+                v-if="event.location && event.date"
+                class="mx-1"
+              >·</span>
+              <span v-if="event.date">{{ formatDate(event.date) }}</span>
+            </div>
+
+            <h3 class="text-lg font-semibold text-highlighted">
+              {{ event.title }}
+            </h3>
+
+            <ULink
+              v-if="event.url"
+              :to="event.url"
+              target="_blank"
+              class="inline-flex items-center mt-2 text-sm font-medium text-primary-400 hover:text-primary-500"
+              inactive-class="text-primary-400 hover:text-primary-500"
+            >
+              {{ event.category === 'Podcast' ? 'Listen' : 'Watch' }}
+              <UIcon
+                name="i-heroicons-arrow-right-20-solid"
+                class="size-4 ml-1"
+              />
+            </ULink>
+          </div>
+        </div>
+      </div>
+    </UPageSection>
   </UPage>
 </template>

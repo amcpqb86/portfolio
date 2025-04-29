@@ -130,7 +130,6 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
-        image: z.string().nonempty(),
         url: z.string().nonempty(),
         tags: z.array(z.string()),
         date: z.string().nonempty()
@@ -162,6 +161,7 @@ export default defineContentConfig({
       schema: PageSchema.extend({
         hero: PageHero,
         events: z.array(z.object({
+          category: z.enum(['Live talk', 'Podcast', 'Conference']),
           title: z.string(),
           date: z.string(),
           location: z.string(),
