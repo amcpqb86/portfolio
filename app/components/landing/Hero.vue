@@ -153,7 +153,7 @@ defineProps<{
           }"
         >
           <UButton
-            v-bind="{ size: 'lg', color: 'neutral', variant: 'ghost', ...link }"
+            v-bind="{ size: 'md', color: 'neutral', variant: 'ghost', ...link }"
           />
         </Motion>
       </div>
@@ -161,7 +161,7 @@ defineProps<{
 
     <UPageMarquee
       pause-on-hover
-      class="py-2 -mx-4 sm:-mx-6 lg:-mx-8"
+      class="py-2 -mx-4 sm:-mx-6 lg:-mx-8 [--duration:40s]"
     >
       <Motion
         v-for="(img, index) in page.hero.images"
