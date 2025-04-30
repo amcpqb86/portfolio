@@ -19,7 +19,7 @@
     "@nuxt/image": "^1.10.0",
     "@nuxt/ui-pro": "https://pkg.pr.new/@nuxt/ui-pro@ddb3b0b",
     "@vueuse/nuxt": "^13.1.0",
-    "motion-v": "1.0.0",
+    "motion-v": "^1.0.0",
     "nuxt": "^3.17.1",
     "nuxt-og-image": "^5.1.3"
   },
