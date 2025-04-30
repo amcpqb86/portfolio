@@ -5,8 +5,8 @@ hero:
   title: "Hey, I'm Emma Thompson\n UX/UI Designer"
   description: "I craft intuitive digital experiences where design meets functionality. Based in Boston, bringing ideas to life through code and creativity."
   links:
-    - label: "Get this template"
-      to: "https://ui.nuxt.com/pro/templates"
+    - label: "Use this template"
+      to: https://github.com/nuxt-ui-pro/portfolio
   images:
     - src: https://picsum.photos/468/468?random=1
       alt: Random Image 1
