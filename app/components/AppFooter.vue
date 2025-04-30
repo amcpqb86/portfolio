@@ -12,8 +12,6 @@ const { footer } = useAppConfig()
     </template>
 
     <template #right>
-      <UColorModeButton size="xs" />
-
       <template v-if="footer?.links">
         <UButton
           v-for="(link, index) of footer?.links"

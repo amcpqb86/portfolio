@@ -21,6 +21,13 @@ export default defineNuxtSchema({
           icon: 'lucide:check',
           default: true
         }),
+        email: field({
+          type: 'string',
+          title: 'Email',
+          description: 'Your email address.',
+          icon: 'lucide:mail',
+          default: 'ui-pro@nuxt.com'
+        }),
         picture: group({
           title: 'Picture',
           description: 'Your profile picture.',

@@ -25,6 +25,8 @@ useSeoMeta({
   ogDescription: page.value.hero.description
 })
 
+const { global } = useAppConfig()
+
 const groupedEvents = computed(() => {
   if (!page.value?.events) return {} as Record<Event['category'], Event[]>
   return page.value.events.reduce((acc, event: Event) => {
@@ -50,13 +52,20 @@ function formatDate(dateString: string): string {
     <UPageHero
       :title="page.hero.title"
       :description="page.hero.description"
-      :links="page.hero.links"
       :ui="{
         title: '!mx-0 text-left',
         description: '!mx-0 text-left',
         links: 'justify-start'
       }"
-    />
+    >
+      <template #links>
+        <UButton
+          v-if="page.hero.links"
+          :to="`mailto:${global.email}`"
+          v-bind="page.hero.links[0]"
+        />
+      </template>
+    </UPageHero>
     <UPageSection
       :ui="{
         container: '!pt-0'

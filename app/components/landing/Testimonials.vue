@@ -9,7 +9,7 @@ defineProps<{
 <template>
   <UPageSection
     :ui="{
-      container: 'px-0 pt-0 sm:pt-0 md:pt-0 lg:pt-0'
+      container: 'px-0 !pt-0'
     }"
   >
     <UCarousel

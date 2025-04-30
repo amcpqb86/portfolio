@@ -47,7 +47,10 @@ useSeoMeta({
             color="neutral"
             v-bind="page.links[0]"
           />
-          <UButton v-bind="page.links[1]" />
+          <UButton
+            :to="`mailto:${global.email}`"
+            v-bind="page.links[1]"
+          />
         </div>
       </template>
     </UPageHero>
@@ -96,12 +99,7 @@ useSeoMeta({
           <img
             :src="project.image"
             :alt="project.title"
-            class="object-cover w-full h-48 rounded-lg mask-b-from-50% mask-b-to-100%"
-            :class="
-              index % 2 === 1
-                ? 'mask-l-from-50% mask-l-to-100%'
-                : 'mask-r-from-50% mask-r-to-100%'
-            "
+            class="object-cover w-full h-48 rounded-lg"
           >
         </UPageCard>
       </Motion>
