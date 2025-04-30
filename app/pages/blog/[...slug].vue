@@ -94,40 +94,6 @@ const formatDate = (dateString: string) => {
             />
           </div>
         </div>
-        <div
-          v-if="page?.body?.toc?.links?.length"
-          class="flex justify-end"
-        >
-          <UPopover
-            :content="{
-              align: 'end',
-              side: 'bottom',
-              sideOffset: 8
-            }"
-          >
-            <UButton
-              class="group w-fit"
-              label="Table of contents"
-              color="neutral"
-              variant="ghost"
-              trailing-icon="i-lucide-chevron-down"
-              :ui="{
-                trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200'
-              }"
-              block
-            />
-            <template #content>
-              <UCard>
-                <UContentToc
-                  :links="page?.body?.toc?.links"
-                  :ui="{
-                    container: 'py-0 lg:py-0'
-                  }"
-                />
-              </UCard>
-            </template>
-          </UPopover>
-        </div>
         <UPageBody class="max-w-3xl mx-auto">
           <ContentRenderer
             v-if="page.body"
