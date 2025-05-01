@@ -1,6 +1,8 @@
 ---
 title: "From Mockup to Market: My End-to-End Product Design Process"
-description: "A detailed breakdown of my iterative design methodology, from initial research to final handoff, with practical tips for designers at every stage."
+description: A detailed breakdown of my iterative design methodology, from
+  initial research to final handoff, with practical tips for designers at every
+  stage.
 date: 2025-04-23
 image: https://images.pexels.com/photos/1050312/pexels-photo-1050312.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
 minRead: 8
@@ -32,6 +34,7 @@ Next, I analyzed existing sustainability apps, creating a feature comparison mat
 ### Defining Success
 
 Before opening Figma, I collaborated with stakeholders to define clear success metrics:
+
 - Increase daily active usage by 40%
 - Improve user-reported understanding of environmental impact
 - Drive measurable behavior changes in at least two sustainability categories
@@ -56,6 +59,7 @@ Based on research insights, I developed a user-centered information architecture
 ### Design Principles
 
 I established four core design principles to guide all decisions:
+
 - **Simplify complexity** — Translate environmental impact into understandable units
 - **Celebrate progress** — Focus on positive reinforcement rather than guilt
 - **Enable informed choices** — Provide context for decision-making
@@ -72,6 +76,7 @@ I created wireframes focusing on user flows and information hierarchy, deliberat
 ### User Testing (Round 1)
 
 Testing wireframes with 8 participants revealed several key insights:
+
 - Users wanted more immediate feedback when logging activities
 - The impact visualization wasn't intuitive for most users
 - People were confused by technical environmental terminology
@@ -79,6 +84,7 @@ Testing wireframes with 8 participants revealed several key insights:
 ### Mid-Fidelity Prototypes
 
 Based on testing feedback, I refined the concept and developed interactive prototypes with more visual detail, focusing on:
+
 - Simplified data visualization using familiar metaphors
 - Immediate positive reinforcement for logged activities
 - Progressive disclosure of more complex environmental information
@@ -86,6 +92,7 @@ Based on testing feedback, I refined the concept and developed interactive proto
 ### User Testing (Round 2)
 
 A second round of testing showed significant improvements in usability, but highlighted new challenges:
+
 - Users wanted to compare their impact with friends or community averages
 - Weekly summaries were more motivating than daily statistics
 - The onboarding process felt too lengthy
@@ -97,6 +104,7 @@ With the core experience validated, I moved into high-fidelity visual design.
 ### Visual Language
 
 I developed a visual language that balanced approachability with credibility:
+
 - A nature-inspired color palette with clear functional color coding
 - Custom iconography that simplified complex concepts
 - Typography that prioritized readability across devices
@@ -105,6 +113,7 @@ I developed a visual language that balanced approachability with credibility:
 ### Design System
 
 To ensure consistency and facilitate development, I created a comprehensive design system including:
+
 - Component library with documented states and behaviors
 - Responsive layout guidelines
 - Animation specifications
@@ -129,6 +138,7 @@ We integrated analytics to track our success metrics, setting up dashboards to m
 ### Post-Launch Iteration
 
 After launch, we established a regular cycle of analysis and iteration:
+
 - Weekly reviews of user feedback and behavior data
 - Bi-weekly design sprints to address emerging issues
 - Monthly feature planning based on usage patterns
@@ -136,6 +146,7 @@ After launch, we established a regular cycle of analysis and iteration:
 ## Results & Learnings
 
 Six months after launch, EcoTrack has exceeded our initial success metrics:
+
 - 52% increase in daily active usage
 - 78% of users report better understanding of their environmental impact
 - Average user has adopted 3.4 new sustainable habits

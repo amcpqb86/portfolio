@@ -1,6 +1,7 @@
 ---
-title: "How I Built My Design System from Scratch"
-description: "A practical guide to creating your own design system, from initial audit to implementation, and the lessons learned along the way."
+title: How I Built My Design System from Scratch
+description: A practical guide to creating your own design system, from initial
+  audit to implementation, and the lessons learned along the way.
 date: 2025-03-05
 image: https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
 minRead: 6
@@ -18,6 +19,7 @@ I started by auditing five of my recent projects, identifying common patterns an
 Rather than creating a rigid system upfront, I built it iteratively through a real client project. For the EcoTrack app, I documented each component as I designed it, creating a living system that evolved with the project's needs.
 
 The core of my system includes:
+
 - A flexible color system with semantic naming conventions
 - Typography scales based on the golden ratio
 - Component variants with clear usage guidelines
