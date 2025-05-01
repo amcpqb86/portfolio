@@ -80,7 +80,7 @@ useSeoMeta({
         >
           <template #leading>
             <span class="text-sm text-muted">
-              {{ project.date }}
+              {{ new Date(project.date).getFullYear() }}
             </span>
           </template>
           <template #footer>
