@@ -1,9 +1,9 @@
 seo:
   title: "Emma Thompson - UX/UI Designer"
   description: "Welcome to my portfolio! I'm Emma Thompson, a UX/UI designer and front-end developer based in Boston. I specialize in creating user-centered digital experiences that are both beautiful and functional."
+title: "Hey, I'm Emma Thompson\n UX/UI Designer"
+description: "I craft intuitive digital experiences where design meets functionality. Based in Boston, bringing ideas to life through code and creativity."
 hero:
-  title: "Hey, I'm Emma Thompson\n UX/UI Designer"
-  description: "I craft intuitive digital experiences where design meets functionality. Based in Boston, bringing ideas to life through code and creativity."
   links:
     - label: "Use this template"
       to: https://github.com/nuxt-ui-pro/portfolio

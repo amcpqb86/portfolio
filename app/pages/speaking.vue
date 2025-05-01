@@ -19,10 +19,10 @@ if (!page.value) {
 }
 
 useSeoMeta({
-  title: page.value.hero.title,
-  ogTitle: page.value.hero.title,
-  description: page.value.hero.description,
-  ogDescription: page.value.hero.description
+  title: page.value.title,
+  ogTitle: page.value.title,
+  description: page.value.description,
+  ogDescription: page.value.description
 })
 
 const { global } = useAppConfig()
@@ -48,8 +48,8 @@ function formatDate(dateString: Date): string {
 <template>
   <UPage v-if="page">
     <UPageHero
-      :title="page.hero.title"
-      :description="page.hero.description"
+      :title="page.title"
+      :description="page.description"
       :ui="{
         title: '!mx-0 text-left',
         description: '!mx-0 text-left',
@@ -58,9 +58,9 @@ function formatDate(dateString: Date): string {
     >
       <template #links>
         <UButton
-          v-if="page.hero.links"
+          v-if="page.links"
           :to="`mailto:${global.email}`"
-          v-bind="page.hero.links[0]"
+          v-bind="page.links[0]"
         />
       </template>
     </UPageHero>

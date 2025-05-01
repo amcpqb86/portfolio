@@ -59,7 +59,7 @@ defineProps<{
           delay: 0.1
         }"
       >
-        {{ page.hero.title }}
+        {{ page.title }}
       </Motion>
     </template>
 
@@ -80,7 +80,7 @@ defineProps<{
           delay: 0.3
         }"
       >
-        {{ page.hero.description }}
+        {{ page.description }}
       </Motion>
     </template>
 

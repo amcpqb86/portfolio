@@ -13,18 +13,18 @@ if (!page.value) {
 const { global } = useAppConfig()
 
 useSeoMeta({
-  title: page.value.hero.title,
-  ogTitle: page.value.hero.title,
-  description: page.value.hero.description,
-  ogDescription: page.value.hero.description
+  title: page.value.title,
+  ogTitle: page.value.title,
+  description: page.value.description,
+  ogDescription: page.value.description
 })
 </script>
 
 <template>
   <UPage v-if="page">
     <UPageHero
-      :title="page.hero.title"
-      :description="page.hero.description"
+      :title="page.title"
+      :description="page.description"
       orientation="horizontal"
       :ui="{
         container: 'lg:flex sm:flex-row items-center',

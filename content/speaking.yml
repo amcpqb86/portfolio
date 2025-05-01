@@ -1,9 +1,8 @@
-hero:
-  title: Talks & Workshops
-  description: Explore talks and workshops I've given on UX design, front-end development, and building better digital products.
-  links:
-    - label: Invite me to speak
-      size: md
+title: Talks & Workshops
+description: Explore talks and workshops I've given on UX design, front-end development, and building better digital products.
+links:
+  - label: Invite me to speak
+    size: md
 events:
   - category: Conference
     title: "Bridging the Gap: Design Systems for Designer-Developer Collaboration"

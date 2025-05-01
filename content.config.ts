@@ -34,17 +34,14 @@ const createTestimonialSchema = () => z.object({
   author: createAuthorSchema()
 })
 
-const createPageHeroSchema = () => createBaseSchema().extend({
-  links: z.array(createButtonSchema()).optional()
-})
-
 export default defineContentConfig({
   collections: {
     index: defineCollection({
       type: 'page',
       source: 'index.yml',
       schema: z.object({
-        hero: createPageHeroSchema().extend({
+        hero: z.object({
+          links: z.array(createButtonSchema()),
           images: z.array(createImageSchema())
         }),
         about: createBaseSchema(),
@@ -104,13 +101,15 @@ export default defineContentConfig({
         { include: 'projects.yml' },
         { include: 'blog.yml' }
       ],
-      schema: createPageHeroSchema()
+      schema: z.object({
+        links: z.array(createButtonSchema())
+      })
     }),
     speaking: defineCollection({
       type: 'page',
       source: 'speaking.yml',
       schema: z.object({
-        hero: createPageHeroSchema(),
+        links: z.array(createButtonSchema()),
         events: z.array(z.object({
           category: z.enum(['Live talk', 'Podcast', 'Conference']),
           title: z.string(),
@@ -124,7 +123,6 @@ export default defineContentConfig({
       type: 'page',
       source: 'about.yml',
       schema: z.object({
-        hero: createPageHeroSchema(),
         content: z.object({}),
         images: z.array(createImageSchema())
       })
