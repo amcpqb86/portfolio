@@ -39,7 +39,7 @@ useSeoMeta({
   ogTitle: title
 })
 
-const articleLink = computed(() => `${window.location}${route.path}`)
+const articleLink = computed(() => `${window?.location}`)
 
 const formatDate = (dateString: Date) => {
   return new Date(dateString).toLocaleDateString('en-US', {
