@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "@nuxt/ui-pro";
+@import "@nuxt/ui";
 
 @source "../../../content/**/*";
 
@@ -10,7 +10,6 @@
 
 :root {
   --ui-container: var(--container-4xl);
-
 
   ::selection {
     color: #282a30;

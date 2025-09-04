@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { ContentNavigationItem } from '@nuxt/content'
-import { findPageBreadcrumb, mapContentNavigation } from '#ui-pro/utils/content'
+import { mapContentNavigation } from '@nuxt/ui/utils/content'
+import { findPageBreadcrumb } from '@nuxt/content/utils'
 
 const route = useRoute()
 
@@ -17,7 +18,7 @@ const { data: surround } = await useAsyncData(`${route.path}-surround`, () =>
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation', ref([]))
 const blogNavigation = computed(() => navigation.value.find(item => item.path === '/blog')?.children || [])
 
-const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(blogNavigation?.value, page.value)).map(({ icon, ...link }) => link))
+const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(blogNavigation?.value, page.value?.path)).map(({ icon, ...link }) => link))
 
 if (page.value.image) {
   defineOgImage({ url: page.value.image })
