@@ -21,6 +21,10 @@ Use this template to create your own portfolio with [Nuxt UI](https://ui.nuxt.co
 npx nuxi init -t github:nuxt-ui-templates/portfolio
 ```
 
+## Deploy your own
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fportfolio)
+
 ## Setup
 
 Make sure to install the dependencies:
