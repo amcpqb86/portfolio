@@ -26,6 +26,11 @@ export default defineAppConfig({
     credits: `Amélien BERNARD • © ${new Date().getFullYear()}`,
     colorMode: false,
     links: [{
+      'icon': 'material-symbols:mail',
+      'to': 'mailto:contact@amelienbernard.fr',
+      'target': '_blank',
+      'aria-label': 'Linkedin'
+    }, {
       'icon': 'i-simple-icons-linkedin',
       'to': 'https://www.linkedin.com/in/amélien-bernard/',
       'target': '_blank',

@@ -18,9 +18,9 @@ useHead({
 })
 
 useSeoMeta({
-  titleTemplate: '%s - Amélien BERNARD',
-  ogImage: 'https://ui4.nuxt.com/assets/templates/nuxt/portfolio-light.png',
-  twitterImage: 'https://ui4.nuxt.com/assets/templates/nuxt/portfolio-light.png',
+  titleTemplate: '%s',
+  ogImage: '/ogimage.jpg',
+  twitterImage: '/ogimage.jpg',
   twitterCard: 'summary_large_image'
 })
 

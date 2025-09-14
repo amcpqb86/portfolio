@@ -14,11 +14,6 @@ hero:
     - src: /dico-square.png
       alt: Le Dictionnariste
       slug: dico
-about:
-  title: "About Me"
-  description: |
-    As a UX/UI designer and front-end developer with 6 years of experience, I leverage my Boston University Interactive Design degree to craft user-centered digital experiences.
-    My approach blends creative strategy with technical expertise, transforming concepts into functional, purposeful digital products that seamlessly integrate design and technology.
 experience:
   title: Expérience
   items:
