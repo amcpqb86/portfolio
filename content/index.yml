@@ -1,61 +1,45 @@
 seo:
-  title: "Emma Thompson - UX/UI Designer"
-  description: "Welcome to my portfolio! I'm Emma Thompson, a UX/UI designer and front-end developer based in Boston. I specialize in creating user-centered digital experiences that are both beautiful and functional."
-title: "Hey, I'm Emma Thompson UX/UI Designer"
-description: "I craft intuitive digital experiences where design meets functionality. Based in Boston, bringing ideas to life through code and creativity."
+  title: "Amélien BERNARD - Développeur Full-Stack"
+  description: "Bienvenue sur mon portfolio ! Je suis Amélien Bernard, développeur full-stack passionné par le web. Découvrez mes projets mêlant front-end et back-end, où performance et créativité se rencontrent."
+title: "Amélien Bernard Développeur \n Full-Stack"
+description: "Je conçois des applications web modernes pour démontrer mon savoir-faire, en alliant technique et simplicité d’utilisation."
 hero:
-  links:
-    - label: "Use this template"
-      to: https://github.com/nuxt-ui-templates/portfolio
-      color: "neutral"
   images:
-    - src: /hero/random-1.avif
-      alt: Random Image 1
-    - src: /hero/random-2.avif
-      alt: Random Image 2
-    - src: /hero/random-3.avif
-      alt: Random Image 3
-    - src: /hero/random-4.avif
-      alt: Random Image 4
-    - src: /hero/random-5.avif
-      alt: Random Image 5
-    - src: /hero/random-6.avif
-      alt: Random Image 6
-    - src: /hero/random-7.avif
-      alt: Random Image 7
-    - src: /hero/random-8.avif
-      alt: Random Image 8
-    - src: /hero/random-9.avif
-      alt: Random Image 9
+    - src: /arkaia-square.png
+      alt: Arkaia
+      slug: arkaia
+    - src: /layro-square.png
+      alt: Layro
+      slug: layro
+    - src: /dico-square.png
+      alt: Le Dictionnariste
+      slug: dico
 about:
   title: "About Me"
   description: |
     As a UX/UI designer and front-end developer with 6 years of experience, I leverage my Boston University Interactive Design degree to craft user-centered digital experiences.
     My approach blends creative strategy with technical expertise, transforming concepts into functional, purposeful digital products that seamlessly integrate design and technology.
 experience:
-  title: Work Experience
+  title: Expérience
   items:
-    - position: "Brand Designer at"
-      date: "2023 - Present"
+    - position: "Développeur FullStack chez"
+      date: "Mars 2024 - Aujourd'hui"
       company:
-        name: Nuxt
-        logo: "i-simple-icons-nuxtdotjs"
-        url: "https://nuxt.com"
-        color: "#00DC82"
-    - position: "Assets Designer at"
-      date: "2022 - 2023"
+        name: Camileia
+        url: "https://www.camileia.com"
+        color: "#0f6dd1"
+    - position: "Développeur FullStack chez"
+      date: "Novembre 2023 - Février 2024"
       company:
-        name: Raycast
-        logo: "i-simple-icons-raycast"
-        url: "https://raycast.com"
-        color: "#FF6363"
-    - position: "Senior UX/UI Designer at"
-      date: "2020 - 2021"
+        name: Amiltone
+        url: "https://www.amiltone.com"
+        color: "#ce308a"
+    - position: "Développeur en alternance chez"
+      date: "Avril 2021 - Août 2023"
       company:
-        name: Linear
-        logo: "i-simple-icons-linear"
-        url: "https://linear.app"
-        color: "#5E6AD2"
+        name: J'peux pas j'ai musée
+        url: "https://www.jpeuxpasjaimusee.org"
+        color: "#4b88c9"
 testimonials:
   - quote: "Emma's approach to UX design completely transformed our product. She has a rare ability to balance beautiful aesthetics with functional simplicity. The redesign not only looked better, but it reduced our customer support tickets by 40% and increased conversion rates across all key metrics."
     author:

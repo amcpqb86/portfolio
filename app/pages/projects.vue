@@ -5,7 +5,7 @@ const { data: page } = await useAsyncData('projects-page', () => {
 if (!page.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: 'Page not found',
+    statusMessage: 'Page introuvable',
     fatal: true
   })
 }
@@ -70,6 +70,7 @@ useSeoMeta({
           :title="project.title"
           :description="project.description"
           :to="project.url"
+          target="_blank"
           orientation="horizontal"
           variant="naked"
           :reverse="index % 2 === 1"
@@ -86,9 +87,10 @@ useSeoMeta({
           <template #footer>
             <ULink
               :to="project.url"
-              class="text-sm text-primary flex items-center"
+              target="_blank"
+              class="text-sm text-primary flex items-center" :class="`text-[${project.color}]`"
             >
-              View Project
+              Voir le projet
               <UIcon
                 name="i-lucide-arrow-right"
                 class="size-4 text-primary transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"

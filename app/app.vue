@@ -18,7 +18,7 @@ useHead({
 })
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt Portfolio Template',
+  titleTemplate: '%s - Amélien BERNARD',
   ogImage: 'https://ui4.nuxt.com/assets/templates/nuxt/portfolio-light.png',
   twitterImage: 'https://ui4.nuxt.com/assets/templates/nuxt/portfolio-light.png',
   twitterCard: 'summary_large_image'

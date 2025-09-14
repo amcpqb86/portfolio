@@ -1,34 +1,39 @@
-name: ci
+name: Déploiement Portfolio
 
-on: push
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  ci:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [22]
-
+  build:
+    runs-on: self-hosted
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
+      - name: Pull
+        working-directory: /home/amelien/work/portfolio
+        run: |
+          git pull https://x-access-token:${{ secrets.PULL }}@github.com/amcpqb86/layro-front.git
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - name: Build image
+        working-directory: /home/amelien/work/layro/front
+        run: docker build . -t layro-front
 
-      - name: Install node
-        uses: actions/setup-node@v5
-        with:
-          node-version: ${{ matrix.node }}
-          cache: pnpm
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Lint
-        run: pnpm run lint
-
-      - name: Typecheck
-        run: pnpm run typecheck
+  deploy:
+    runs-on: self-hosted
+    needs: build
+    steps:
+      - name: Lancer Docker Compose
+        run: docker compose -f /srv/layro-front/docker-compose.yml up -d
+      - name: LogSnag - Notify deployment
+        run: |
+          curl -X POST https://api.logsnag.com/v1/log \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer ${{ secrets.LOGSNAG_TOKEN }}" \
+            -d '{
+              "project": "layro",
+              "channel": "deploy",
+              "event": "Front deployed",
+              "description": "Nouvelle version du front déployé en production",
+              "icon": "🚀",
+              "notify": true
+            }'

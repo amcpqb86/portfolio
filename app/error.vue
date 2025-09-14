@@ -15,8 +15,8 @@ useHead({
 })
 
 useSeoMeta({
-  title: 'Page not found',
-  description: 'We are sorry but this page could not be found.'
+  title: 'Page introuvable',
+  description: 'Impossible d\'accéder à cette page'
 })
 
 const [{ data: navigation }, { data: files }] = await Promise.all([
