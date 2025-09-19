@@ -1,0 +1,5 @@
+title: Heraldica
+description: Heraldica est un projet web que j’ai conçu pour rendre l’héraldique accessible à tous. Il permet de créer facilement des blasons en vectoriel, de les personnaliser via une interface intuitive et de consulter une base de données de blasons existants. L’objectif est de mêler histoire, esthétique et technologie moderne grâce à Nuxt et Tailwind, tout en offrant une documentation claire pour découvrir cet univers médiéval.
+image: /heraldica.png
+url: "https://heraldica.fr/editor"
+date: "2024"

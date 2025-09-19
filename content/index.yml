@@ -14,6 +14,9 @@ hero:
     - src: /dico-square.png
       alt: Le Dictionnariste
       slug: dico
+    - src: /heraldica-square.png
+      alt: Heraldica
+      slug: heraldica
 experience:
   title: Expérience
   items:
