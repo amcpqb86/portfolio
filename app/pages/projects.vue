@@ -12,7 +12,7 @@ if (!page.value) {
 
 const { data: projects } = await useAsyncData('projects', () => {
   return queryCollection('projects')
-    .order('date', 'desc')
+    .order('date', 'DESC')
     .all()
 })
 
