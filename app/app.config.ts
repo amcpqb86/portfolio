@@ -1,11 +1,10 @@
 export default defineAppConfig({
   global: {
     picture: {
-      dark: 'https://media.licdn.com/dms/image/v2/D4E03AQGafhGq0HYXYA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1724761290229?e=1760572800&v=beta&t=y91ECc1cgurc9ZHG3oIfyn4yKuW8Pz1pcOYdxlYO6Og',
-      light: 'https://media.licdn.com/dms/image/v2/D4E03AQGafhGq0HYXYA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1724761290229?e=1760572800&v=beta&t=y91ECc1cgurc9ZHG3oIfyn4yKuW8Pz1pcOYdxlYO6Og',
+      dark: '/avatar.png',
+      light: '/avatar.png',
       alt: 'My profile picture'
     },
-    meetingLink: 'https://cal.com/',
     email: 'contact@amelienbernard.fr',
     available: true
   },
