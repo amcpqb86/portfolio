@@ -5,6 +5,9 @@ title: "Amélien Bernard Développeur \n Full-Stack"
 description: "Je conçois des applications web modernes pour démontrer mon savoir-faire, en alliant technique et simplicité d’utilisation."
 hero:
   images:
+    - src: /daktylo-square.png
+      alt: Daktylo
+      slug: daktylo
     - src: /arkaia-square.png
       alt: Arkaia
       slug: arkaia
