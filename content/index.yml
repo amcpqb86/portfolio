@@ -20,6 +20,9 @@ hero:
     - src: /heraldica-square.png
       alt: Heraldica
       slug: heraldica
+    - src: /chroniques-ama-square.png
+      alt: Les chroniques d'Ama
+      slug: chroniques-ama
 experience:
   title: Expérience
   items:
