@@ -13,6 +13,13 @@ export default defineNuxtConfig({
     enabled: true
   },
 
+  runtimeConfig: {
+    public: {
+      amelienDevUmamiId: "",
+      abFrUmamiId: ""
+    }
+  },
+
   css: ['~/assets/css/main.css'],
 
   compatibilityDate: '2024-11-01',
