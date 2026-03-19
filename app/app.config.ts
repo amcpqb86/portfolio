@@ -1,8 +1,8 @@
 export default defineAppConfig({
   global: {
     picture: {
-      dark: '/avatar.png',
-      light: '/avatar.png',
+      dark: '/avatar.jpeg',
+      light: '/avatar.jpeg',
       alt: 'My profile picture'
     },
     email: 'contact@amelienbernard.fr',

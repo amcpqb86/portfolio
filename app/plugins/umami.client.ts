@@ -1,13 +1,12 @@
 export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig()
 
-  // @ts-ignore
   const ids: Record<string, string> = {
-    'amelien.dev': config.public.amelienDevUmamiId,
-    'amelienbernard.fr': config.public.abFrUmamiId,
+    "amelien.dev": config.public.amelienDevUmamiId as string,
+    "amelienbernard.fr": config.public.abFrUmamiId as string,
   }
 
-  const id = ids[window.location.hostname]
+  const id = ids[globalThis.location.hostname]
   if (!id) return
 
   useHead({
