@@ -8,6 +8,9 @@ hero:
     - src: /daktylo-square.png
       alt: Daktylo
       slug: daktylo
+    - src: /lagoon-square.png
+      alt: Lagoon
+      slug: lagoon
     - src: /arkaia-square.png
       alt: Arkaia
       slug: arkaia
