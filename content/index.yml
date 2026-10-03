@@ -38,6 +38,11 @@ experience:
         name: Camileia
         url: "https://www.camileia.com"
         color: "#0f6dd1"
+      parent:
+        label: "by"
+        name: DimoMaint
+        url: "https://www.dimomaint.com"
+        color: "#4DA7C4"
     - position: "Développeur FullStack chez"
       date: "Novembre 2023 - Février 2024"
       company:
