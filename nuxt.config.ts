@@ -43,8 +43,9 @@ export default defineNuxtConfig({
     prerender: {
       routes: [
         '/',
-        // Not linked from the site, so the crawler wouldn't find it.
-        '/dvd-library/confidentialite'
+        // Not linked from the site, so the crawler wouldn't find them.
+        '/dvd-library/confidentialite',
+        '/dvd-library/assistance'
       ],
       crawlLinks: true
     }
