@@ -42,7 +42,9 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: [
-        '/'
+        '/',
+        // Not linked from the site, so the crawler wouldn't find it.
+        '/dvd-library/confidentialite'
       ],
       crawlLinks: true
     }
