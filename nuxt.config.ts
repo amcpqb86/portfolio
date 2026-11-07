@@ -45,7 +45,9 @@ export default defineNuxtConfig({
         '/',
         // Not linked from the site, so the crawler wouldn't find them.
         '/dvd-library/confidentialite',
-        '/dvd-library/assistance'
+        '/dvd-library/assistance',
+        '/starshelf/confidentialite',
+        '/starshelf/assistance'
       ],
       crawlLinks: true
     }

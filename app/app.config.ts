@@ -5,7 +5,7 @@ export default defineAppConfig({
       light: '/avatar.jpeg',
       alt: 'My profile picture'
     },
-    email: 'contact@amelienbernard.fr',
+    email: 'contact@amelien.dev',
     available: true
   },
   ui: {
@@ -26,7 +26,7 @@ export default defineAppConfig({
     colorMode: false,
     links: [{
       'icon': 'material-symbols:mail',
-      'to': 'mailto:contact@amelienbernard.fr',
+      'to': 'mailto:contact@amelien.dev',
       'target': '_blank',
       'aria-label': 'Linkedin'
     }, {

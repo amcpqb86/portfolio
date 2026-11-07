@@ -11,6 +11,9 @@ hero:
     - src: /lagoon-square.png
       alt: Lagoon
       slug: lagoon
+    - src: /starshelf-square.png
+      alt: Starshelf
+      slug: starshelf
     - src: /arkaia-square.png
       alt: Arkaia
       slug: arkaia
